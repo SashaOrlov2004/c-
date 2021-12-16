@@ -10,20 +10,15 @@ string Copy(string S, int n1, int n2) {
 	return str;
 }
 
-
-
-
 int main() {
 	setlocale(0, "");
 	string S;
 	cout << "Введите строку" << endl;
 	cin >> S;
 
-
 	int n1;
 	cout << "Введите первую границу строки" << endl;
 	cin >> n1;
-
 
 	int n2;
 	cout << "Введите вторую границу строки" << endl;
