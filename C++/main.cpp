@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-const int n = 10;
+ int n = 10;
  
 char* stroka(char* temp, int positia, int dlina, int t) {
     int size = 0;
@@ -34,7 +34,6 @@ int mylen(char str[]) {
     return k;
 } 
 int main() {
-    setlocale(LC_ALL, "Rus");
     char a[n];
     cout << "Введите строку: ";
     cin.getline(a, n);
@@ -47,8 +46,5 @@ int main() {
     char* str; 
     str = stroka(a, number, len, k);
     cout << str << endl;
-
-    system("pause");
-    delete str;
     return 0;
 }
