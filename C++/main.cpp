@@ -4,7 +4,7 @@ using namespace::std;
 
 string Copy(string S, int n1, int n2) {
 	string str = "";
-	for (int i = n1; i < (n2 +1); i++){
+	for (int i = n1; i < (n2 + 1); i++){
 		str += S[i];
 	}
 	return str;
