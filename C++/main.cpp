@@ -1,50 +1,34 @@
 #include <iostream>
-using namespace std;
- int n = 10;
- 
-char* stroka(char* temp, int positia, int dlina, int t) {
-    int size = 0;
-    char* z = new char[size];
-    int k = 0;
- 
-    if (positia > dlina) {
-        size = dlina + positia + 1;
-        for (int i = positia; i < size; i++) {
-            z[k] = temp[i];
-            k++;
-        }
-        z[k] = '\0';
-    }
-    else{
-        size = dlina - positia + 1;
-        for (int i = positia; i < size; i++) {
-            z[k] = temp[i];
-            k++;
-        }
-        z[k] = '\0';
-    }
-    return z;
+using namespace::std;
+
+
+string Copy(string S, int n1, int n2) {
+	string str = "";
+	for (int i = n1; i < (n2 +1); i++){
+		str += S[i];
+	}
+	return str;
 }
- 
-int mylen(char str[]) {
-    int k = 0;
-    while (str[k]) {
-        k++;
-    }
-    return k;
-} 
+
+
+
+
 int main() {
-    char a[n];
-    cout << "Введите строку: ";
-    cin.getline(a, n);
-    int k = mylen(a);
-    int len, number;
-    cout << "Введите номер элемента начала подстроки: ";
-    cin >> number;
-    cout << "Укажите длину подстроки: ";
-    cin >> len;
-    char* str; 
-    str = stroka(a, number, len, k);
-    cout << str << endl;
-    return 0;
+	setlocale(0, "");
+	string S;
+	cout << "Введите строку" << endl;
+	cin >> S;
+
+
+	int n1;
+	cout << "Введите первую границу строки" << endl;
+	cin >> n1;
+
+
+	int n2;
+	cout << "Введите вторую границу строки" << endl;
+	cin >> n2;
+	
+	cout << Copy(S, n1, n2);
+	
 }
